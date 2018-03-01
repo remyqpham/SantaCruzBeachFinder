@@ -14,6 +14,7 @@ class Beach(models.Model):
 	is_open_after_10pm = models.BooleanField(default=False)
 	is_bonfire_friendly = models.BooleanField(default=False)
 	is_good_for_surfing = models.BooleanField(default=False)
+	has_free_parking = models.BooleanField(default=False)
 	photo = models.ImageField(upload_to='beaches')
 
 	def __str__(self):
