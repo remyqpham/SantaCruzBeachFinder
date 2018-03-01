@@ -18,7 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
    	url(r'^beaches/', include('beaches.urls')),
-	
     url(r'^admin/', admin.site.urls),
 
 ]

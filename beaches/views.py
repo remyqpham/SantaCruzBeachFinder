@@ -12,3 +12,7 @@ from .models import Beach
 def index(request):
 	template = loader.get_template('beaches/index.html')
 	return HttpResponse(template.render())
+
+def search(request):
+	template = loader.get_template('beaches/search.html')
+	return HttpResponse(template.render())
