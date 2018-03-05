@@ -11,7 +11,7 @@ class Beach(models.Model):
 	address_text = models.CharField(max_length=100)
 	is_pet_friendly = models.BooleanField(default=False)
 	is_alcohol_friendly = models.BooleanField(default=False)
-	is_open_after_10pm = models.BooleanField(default=False)
+	is_open_after_sunset = models.BooleanField(default=False)
 	is_bonfire_friendly = models.BooleanField(default=False)
 	is_camping_friendly = models.BooleanField(default=False)
 	is_good_for_surfing = models.BooleanField(default=False)

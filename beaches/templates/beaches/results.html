@@ -1,48 +1,19 @@
-<h1>Nice, you made it to the results page. </h1>
+{% extends 'beaches/base.html' %}
 
-<p>Here's the beach titles</p>
+{% block content %}
 
-<ul>
-{% for beach in beaches_list %}
-	<li>{{beach.title_text}}</li>
-{% endfor %}
-</ul>
+<h1>Search Results</h1>
 
-
-
-<p>Here's your search results, starting with the filtered_beaches_list</p>
-
-{{filtered_beaches_list}}
+<p>We found the following beaches for you:</p>
 
 <ul>
 {% for beach in filtered_beaches_list %}
-	<li>{{beach.title_text}}</li>
+	<li><a href="{{beach.id}}">{{beach.title_text}}</a></li>
+
 {% endfor %}
 </ul>
 
-
-<h2>Your search had the following arguments:</h2>
-
-<h3>is_pet_friendly</h3>
-{{is_pet_friendly}}
-
-<h3>is_alcohol_friendly</h3>
-{{is_alcohol_friendly}}
-
-<h3>is_open_after_10pm</h3>
-{{is_open_after_10pm}}
-
-<h3>is_bonfire_friendly</h3>
-{{is_bonfire_friendly}}
-
-<h3>is_camping_friendly</h3>
-{{is_camping_friendly}}
+<a href="/beaches/search/">Back to search</a>
 
 
-<h3>is_good_for_surfing</h3>
-{{is_good_for_surfing}}
-
-<h3>has_free_parking</h3>
-{{has_free_parking}}
-
-
+{% endblock %}

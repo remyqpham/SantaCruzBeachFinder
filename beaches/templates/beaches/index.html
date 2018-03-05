@@ -1,4 +1,12 @@
-<h1>Santa Cruz Beach Finder</h1>
+{% extends 'beaches/base.html' %}
 
+{% block content %}
+<div class="centered">
+	<a class="button green" href="/beaches/search">Find your beach</a>
+	<br>
+</div>
 
-<a href="/beaches/search/">Find your beach</a>
+<div class="centered2">
+	<a href="/beaches/results?is_pet_friendly=0&is_alcohol_friendly=0&is_open_after_sunset=0&is_bonfire_friendly=0&is_camping_friendly=0&is_good_for_surfing=0&has_free_parking=0">View all beaches</a>
+</div>
+{% endblock %}

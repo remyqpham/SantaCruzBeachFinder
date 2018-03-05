@@ -1,5 +1,11 @@
-<h1>You're viewing the details page of beach with id {{beach_id}}.</h1>
+{% extends 'beaches/base.html' %}
 
-<h2>The beach name is {{beach.title_text}}</h2>
+{% block content %}
+
+<h1>{{beach.title_text}}</h1>
+
+<p>{{beach.description_text}}</p>
 
 <a href="/beaches/search/">Back to search</a>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Santa Cruz Beach Finder</title>
+		  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cantarell">
+		<link rel="stylesheet" href="/static/css/style.css">
+	</head>
+<!-- header content goes here -->
+	<div class="topnav">
+	  	<!-- 
+	  	<a class="active" href="#home">Home</a> 
+	  	-->
+
+	  	<a href="/beaches/">Home</a>
+	  	<a href="/beaches/search">Search</a>
+
+	</div>
+	<body>
+		<div class="wrapper">
+			<main>
+				<section class ="module parallax beachfinderbg partialfill">
+					<h1>Santa Cruz Beach Finder</h1>
+					<div class="container centered">
+
+
+					</div>
+				</section>
+
+				<section class = "module content" id="block content">
+					<div class="container 75width">
+						{% block content %}
+						{% endblock %}
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>

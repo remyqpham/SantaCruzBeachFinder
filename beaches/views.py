@@ -31,7 +31,7 @@ def results(request):
 	filtered_beaches_list = Beach.objects.order_by('title_text')
 	is_pet_friendly = request.GET['is_pet_friendly']
 	is_alcohol_friendly = request.GET['is_alcohol_friendly']
-	is_open_after_10pm = request.GET['is_open_after_10pm']
+	is_open_after_sunset = request.GET['is_open_after_sunset']
 	is_bonfire_friendly = request.GET['is_bonfire_friendly']
 	is_camping_friendly = request.GET['is_camping_friendly']
 	is_good_for_surfing = request.GET['is_good_for_surfing']
@@ -41,8 +41,8 @@ def results(request):
 		filtered_beaches_list = filtered_beaches_list.filter(is_pet_friendly=True)
 	if is_alcohol_friendly=='1':
 		filtered_beaches_list = filtered_beaches_list.filter(is_alcohol_friendly=True)
-	if is_open_after_10pm=='1':
-		filtered_beaches_list = filtered_beaches_list.filter(is_open_after_10pm=True)
+	if is_open_after_sunset=='1':
+		filtered_beaches_list = filtered_beaches_list.filter(is_open_after_sunset=True)
 	if is_bonfire_friendly=='1':
 		filtered_beaches_list = filtered_beaches_list.filter(is_bonfire_friendly=True)
 	if is_camping_friendly=='1':
@@ -58,7 +58,7 @@ def results(request):
 		'filtered_beaches_list':filtered_beaches_list,
 		'is_pet_friendly':is_pet_friendly,
 		'is_alcohol_friendly':is_alcohol_friendly,
-		'is_open_after_10pm':is_open_after_10pm,
+		'is_open_after_sunset':is_open_after_sunset,
 		'is_bonfire_friendly':is_bonfire_friendly,
 		'is_camping_friendly':is_camping_friendly,
 		'is_good_for_surfing':is_good_for_surfing,
