@@ -1,12 +1,5 @@
 <h1>Nice, you made it to the results page. </h1>
 
-<p>Request object</p>
-{{request}}
-
-<p>Beaches_list object</p>
-
-{{beaches_list}}
-
 <p>Here's the beach titles</p>
 
 <ul>
@@ -15,22 +8,37 @@
 {% endfor %}
 </ul>
 
-<h2>is_pet_friendly</h2>
+
+
+<p>Here's your search results, starting with the filtered_beaches_list</p>
+
+{{filtered_beaches_list}}
+
+<ul>
+{% for beach in filtered_beaches_list %}
+	<li>{{beach.title_text}}</li>
+{% endfor %}
+</ul>
+
+
+<h2>Your search had the following arguments:</h2>
+
+<h3>is_pet_friendly</h3>
 {{is_pet_friendly}}
 
-<h2>is_alcohol_friendly</h2>
+<h3>is_alcohol_friendly</h3>
 {{is_alcohol_friendly}}
 
-<h2>is_open_after_10pm</h2>
+<h3>is_open_after_10pm</h3>
 {{is_open_after_10pm}}
 
-<h2>is_bonfire_friendly</h2>
+<h3>is_bonfire_friendly</h3>
 {{is_bonfire_friendly}}
 
-<h2>is_good_for_surfing</h2>
+<h3>is_good_for_surfing</h3>
 {{is_good_for_surfing}}
 
-<h2>has_free_parking</h2>
+<h3>has_free_parking</h3>
 {{has_free_parking}}
 
 

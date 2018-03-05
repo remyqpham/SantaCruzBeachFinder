@@ -28,17 +28,54 @@ def search(request):
 def results(request):
 	#template = loader.get_template('beaches/results.html')
 	beaches_list = Beach.objects.order_by('title_text')
-
-
+	filtered_beaches_list = Beach.objects.order_by('title_text')
 	is_pet_friendly = request.GET['is_pet_friendly']
 	is_alcohol_friendly = request.GET['is_alcohol_friendly']
 	is_open_after_10pm = request.GET['is_open_after_10pm']
 	is_bonfire_friendly = request.GET['is_bonfire_friendly']
 	is_good_for_surfing = request.GET['is_good_for_surfing']
 	has_free_parking = request.GET['has_free_parking']
+
+	#sorting logic goes here. fill filtered_beaches_list with eligible beaches
+
+	#for beach in beaches_list:
+	#	if (is_pet_friendly == 1) and beach.is_pet_friendly and (beach not in filtered_beaches_list):
+	#	if (is_pet_friendly) and (not beach.is_pet_friendly) and (beach not in filtered_beaches_list):	
+			
+	#		pass
+	"""
+		if is_alcohol_friendly and beach.is_alcohol_friendly and beach not in filtered_beaches_list:	
+			filtered_beaches_list.append(beach)
+		if is_open_after_10pm and beach.is_open_after_10pm and beach not in filtered_beaches_list:	
+			filtered_beaches_list.append(beach)
+		if is_bonfire_friendly and beach.is_bonfire_friendly and beach not in filtered_beaches_list:	
+			filtered_beaches_list.append(beach)
+		if is_good_for_surfing and beach.is_good_for_surfing and beach not in filtered_beaches_list:	
+			filtered_beaches_list.append(beach)
+		if has_free_parking and beach.has_free_parking and beach not in filtered_beaches_list:	
+			filtered_beaches_list.append(beach)				
+	"""
+
+	if is_pet_friendly=='1':
+		filtered_beaches_list = filtered_beaches_list.filter(is_pet_friendly=True)
+	if is_alcohol_friendly=='1':
+		filtered_beaches_list = filtered_beaches_list.filter(is_alcohol_friendly=True)
+	if is_open_after_10pm=='1':
+		filtered_beaches_list = filtered_beaches_list.filter(is_open_after_10pm=True)
+	if is_bonfire_friendly=='1':
+		filtered_beaches_list = filtered_beaches_list.filter(is_bonfire_friendly=True)
+	if is_good_for_surfing=='1':
+		filtered_beaches_list = filtered_beaches_list.filter(is_good_for_surfing=True)
+	if has_free_parking=='1':
+		filtered_beaches_list = filtered_beaches_list.filter(has_free_parking=True)
+		
+
+
+
 	context = {
 		'request': request,
 		'beaches_list':beaches_list,
+		'filtered_beaches_list':filtered_beaches_list,
 		'is_pet_friendly':is_pet_friendly,
 		'is_alcohol_friendly':is_alcohol_friendly,
 		'is_open_after_10pm':is_open_after_10pm,
