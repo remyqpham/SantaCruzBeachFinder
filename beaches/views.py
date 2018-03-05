@@ -36,26 +36,6 @@ def results(request):
 	is_good_for_surfing = request.GET['is_good_for_surfing']
 	has_free_parking = request.GET['has_free_parking']
 
-	#sorting logic goes here. fill filtered_beaches_list with eligible beaches
-
-	#for beach in beaches_list:
-	#	if (is_pet_friendly == 1) and beach.is_pet_friendly and (beach not in filtered_beaches_list):
-	#	if (is_pet_friendly) and (not beach.is_pet_friendly) and (beach not in filtered_beaches_list):	
-			
-	#		pass
-	"""
-		if is_alcohol_friendly and beach.is_alcohol_friendly and beach not in filtered_beaches_list:	
-			filtered_beaches_list.append(beach)
-		if is_open_after_10pm and beach.is_open_after_10pm and beach not in filtered_beaches_list:	
-			filtered_beaches_list.append(beach)
-		if is_bonfire_friendly and beach.is_bonfire_friendly and beach not in filtered_beaches_list:	
-			filtered_beaches_list.append(beach)
-		if is_good_for_surfing and beach.is_good_for_surfing and beach not in filtered_beaches_list:	
-			filtered_beaches_list.append(beach)
-		if has_free_parking and beach.has_free_parking and beach not in filtered_beaches_list:	
-			filtered_beaches_list.append(beach)				
-	"""
-
 	if is_pet_friendly=='1':
 		filtered_beaches_list = filtered_beaches_list.filter(is_pet_friendly=True)
 	if is_alcohol_friendly=='1':
@@ -68,9 +48,6 @@ def results(request):
 		filtered_beaches_list = filtered_beaches_list.filter(is_good_for_surfing=True)
 	if has_free_parking=='1':
 		filtered_beaches_list = filtered_beaches_list.filter(has_free_parking=True)
-		
-
-
 
 	context = {
 		'request': request,
