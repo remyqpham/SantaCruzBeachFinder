@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.template import loader
 
 from .models import Beach
@@ -47,7 +47,7 @@ def results(request):
 		filtered_beaches_list = filtered_beaches_list.filter(is_bonfire_friendly=True)
 	if is_camping_friendly=='1':
 		filtered_beaches_list = filtered_beaches_list.filter(is_camping_friendly=True)
-	if is_good_for_surfing=='1':
+	if is_good_for_surfing=='1': 
 		filtered_beaches_list = filtered_beaches_list.filter(is_good_for_surfing=True)
 	if has_free_parking=='1':
 		filtered_beaches_list = filtered_beaches_list.filter(has_free_parking=True)
@@ -66,4 +66,14 @@ def results(request):
 	}
 	return render(request, 'beaches/results.html', context)
 
-#def results(request):
+def details(request, beach_id):
+	beaches_list = Beach.objects.order_by('title_text')
+	try:
+		beach = beaches_list.get(pk=beach_id)
+	except Beach.DoesNotExist:
+		raise Http404("Beach does not exist.")
+	context = {
+		'beach_id':beach_id,
+		'beach':beach,
+	}
+	return render(request, 'beaches/details.html', context)
