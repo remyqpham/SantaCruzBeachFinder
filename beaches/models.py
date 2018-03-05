@@ -13,9 +13,10 @@ class Beach(models.Model):
 	is_alcohol_friendly = models.BooleanField(default=False)
 	is_open_after_10pm = models.BooleanField(default=False)
 	is_bonfire_friendly = models.BooleanField(default=False)
+	is_camping_friendly = models.BooleanField(default=False)
 	is_good_for_surfing = models.BooleanField(default=False)
 	has_free_parking = models.BooleanField(default=False)
-	photo = models.ImageField(upload_to='beaches')
+	photo = models.ImageField(upload_to='beaches/media')
 
 	def __str__(self):
 		return self.title_text

@@ -33,6 +33,7 @@ def results(request):
 	is_alcohol_friendly = request.GET['is_alcohol_friendly']
 	is_open_after_10pm = request.GET['is_open_after_10pm']
 	is_bonfire_friendly = request.GET['is_bonfire_friendly']
+	is_camping_friendly = request.GET['is_camping_friendly']
 	is_good_for_surfing = request.GET['is_good_for_surfing']
 	has_free_parking = request.GET['has_free_parking']
 
@@ -44,6 +45,8 @@ def results(request):
 		filtered_beaches_list = filtered_beaches_list.filter(is_open_after_10pm=True)
 	if is_bonfire_friendly=='1':
 		filtered_beaches_list = filtered_beaches_list.filter(is_bonfire_friendly=True)
+	if is_camping_friendly=='1':
+		filtered_beaches_list = filtered_beaches_list.filter(is_camping_friendly=True)
 	if is_good_for_surfing=='1':
 		filtered_beaches_list = filtered_beaches_list.filter(is_good_for_surfing=True)
 	if has_free_parking=='1':
@@ -57,6 +60,7 @@ def results(request):
 		'is_alcohol_friendly':is_alcohol_friendly,
 		'is_open_after_10pm':is_open_after_10pm,
 		'is_bonfire_friendly':is_bonfire_friendly,
+		'is_camping_friendly':is_camping_friendly,
 		'is_good_for_surfing':is_good_for_surfing,
 		'has_free_parking':has_free_parking,
 	}
