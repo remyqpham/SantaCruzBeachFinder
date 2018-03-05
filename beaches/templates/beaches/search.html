@@ -1,30 +1,20 @@
 <h1>Nice, you made it to the search page. </h1>
 
-<p>Here's the list of all beaches:</p>
-
-{{beaches_list}}
-
-<p>Here's the beach titles</p>
-
-<ul>
-{% for beach in beaches_list %}
-	<li>{{beach.title_text}}</li>
-{% endfor %}
-</ul>
-
-<p>Here's the list of beaches in filtered_beaches_list </p>
-
-{{filtered_beaches_list}}
-
 <p>Here is some HTML testing checkboxes</p>
 
 
 <form name="search_something" action=/beaches/results method="get">
-<input type=checkbox name="is_pet_friendly" value="True">Pet Friendly<br>
-<input type=checkbox name="is_alcohol_friendly" value="True">Alcohol Friendly<br>
-<input type=checkbox name="is_open_after_10pm" value="True">Open after 10pm<br>
-<input type=checkbox name="is_bonfire_friendly" value="True">Bonfire Friendly<br>
-<input type=checkbox name="is_good_for_surfing" value="True">Good surf spot<br>
-<input type=checkbox name="has_free_parking" value="true">Free parking<br>
+<input type="hidden" name="is_pet_friendly" value="0"/>
+<input type="checkbox" name="is_pet_friendly" value="1">Pet Friendly<br>
+<input type="hidden" name="is_alcohol_friendly" value="0">
+<input type="checkbox" name="is_alcohol_friendly" value="1">Alcohol Friendly<br>
+<input type="hidden" name="is_open_after_10pm" value="0">
+<input type="checkbox" name="is_open_after_10pm" value="1">Open after 10pm<br>
+<input type="hidden" name="is_bonfire_friendly" value="0">
+<input type="checkbox" name="is_bonfire_friendly" value="1">Bonfire Friendly<br>
+<input type="hidden" name="is_good_for_surfing" value="0">
+<input type="checkbox" name="is_good_for_surfing" value="1">Good surf spot<br>
+<input type="hidden" name="has_free_parking" value="0">
+<input type="checkbox" name="has_free_parking" value="1">Free parking<br>
 <input type=submit value="Search">
 </form>

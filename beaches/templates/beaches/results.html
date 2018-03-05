@@ -1,1 +1,36 @@
 <h1>Nice, you made it to the results page. </h1>
+
+<p>Request object</p>
+{{request}}
+
+<p>Beaches_list object</p>
+
+{{beaches_list}}
+
+<p>Here's the beach titles</p>
+
+<ul>
+{% for beach in beaches_list %}
+	<li>{{beach.title_text}}</li>
+{% endfor %}
+</ul>
+
+<h2>is_pet_friendly</h2>
+{{is_pet_friendly}}
+
+<h2>is_alcohol_friendly</h2>
+{{is_alcohol_friendly}}
+
+<h2>is_open_after_10pm</h2>
+{{is_open_after_10pm}}
+
+<h2>is_bonfire_friendly</h2>
+{{is_bonfire_friendly}}
+
+<h2>is_good_for_surfing</h2>
+{{is_good_for_surfing}}
+
+<h2>has_free_parking</h2>
+{{has_free_parking}}
+
+
