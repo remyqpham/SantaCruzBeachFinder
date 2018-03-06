@@ -73,9 +73,12 @@ def details(request, beach_id):
 	except Beach.DoesNotExist:
 		raise Http404("Beach does not exist.")
 	photo = beach.photo
+	photoURL = str(beach.photo.url)
+	photoURL = photoURL[7:]
 	context = {
 		'beach_id':beach_id,
 		'beach':beach,
 		'photo':photo,
+		'photoURL':photoURL,
 	}
 	return render(request, 'beaches/details.html', context)

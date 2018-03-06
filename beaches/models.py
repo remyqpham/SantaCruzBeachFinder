@@ -16,7 +16,7 @@ class Beach(models.Model):
 	is_camping_friendly = models.BooleanField(default=False)
 	is_good_for_surfing = models.BooleanField(default=False)
 	has_free_parking = models.BooleanField(default=False)
-	photo = models.ImageField(upload_to='beaches/media')
+	photo = models.ImageField(upload_to='beaches/static/media')
 
 	def __str__(self):
 		return self.title_text
