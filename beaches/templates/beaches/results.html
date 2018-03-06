@@ -7,10 +7,20 @@
 <p>We found the following beaches for you:</p>
 <br>
 
-{% for beach in filtered_beaches_list %}
-	<a href="{{beach.id}}">{{beach.title_text}}</a>
-	<br>
 
+
+
+{% for beach in filtered_beaches_list %}
+	
+	<div>
+		<img class="img" src="{{filtered_beaches_photos_urls|get_item:beach.id}}" width="200" >
+		<p>
+			<a href="{{beach.id}}" >{{beach.title_text}}</a><br>
+			
+			{{filtered_beaches_desc_previews|get_item:beach.id}}...<a href="{{beach.id}}">Read more</a> 
+	</div>
+
+	<br><br><br>
 {% endfor %}
 
 <div class="centered2">
