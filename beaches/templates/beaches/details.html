@@ -2,18 +2,48 @@
 
 {% block content %}
 
-<h1>{{beach.title_text}}</h1>
+<h1 align = "center">{{beach.title_text}}</h1>
 
-<h3>Address: {{beach.address_text}}</h3>
+<div style="text-align: center;">
+	<img src="{{photoURL}}" > 
+</div>
 
+<h3 align = "center">Address: {{beach.address_text}}</h3>
 
-<img src="{{photoURL}}"> 
-
+<br>
 
 <p>{{beach.description_text}}</p>
 
+<br>
 
-<br><br>
+{% if beach.is_pet_friendly %}
+	<p>Pet-friendly</p>
+{% endif %}
+
+{% if beach.is_alcohol_friendly %}
+	<p>Alcohol-friendly</p>
+{% endif %}
+
+{% if is_open_after_sunset %}
+	<p>Open after suneset</p>
+{% endif %}
+
+{% if beach.is_bonfire_friendly %}
+	<p>Bonfire-friendly</p>
+{% endif %}
+
+{% if beach.is_camping_friendly %}
+	<p>Good for camping</p>
+{% endif %}
+
+{% if beach.is_good_for_surfing %}
+	<p>Good surf spot</p>
+{% endif %}
+
+{% if beach.has_free_parking %}
+	<p>Free parking nearby</p>
+{% endif %}
+
 <div class="centered2">
 	<a href="/beaches/search/">Back to search</a>
 </div>
