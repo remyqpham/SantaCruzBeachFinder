@@ -55,9 +55,7 @@ table {
 figcaption{
   text-align: center;
   padding-bottom: 10px;
-
 }
-
 
 /* ============================================================
   BOX SIZING & CLEARFIX
@@ -83,7 +81,7 @@ body {
   background-color: #b4b4b4;
   color: #787878;
   font-family: "Cantarell", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -115,7 +113,9 @@ main {
 .centered2{
   transform: translateX(42.5%);
 }
-
+.centered3{
+  transform: translateX(25%);
+}
 .lowered{
   transform:translateY(200%);
 }
@@ -199,10 +199,10 @@ section.module.parallax.fill{
   height: 100vh;
 }
  section.module.parallax.partialfill{
-  height: 40vh;
+  height: 30vh;
  }
 section.module.parallax.olderpostfill{
-  height: 20vh;
+  height: 30vh;
 }
 section.module.parallax h1 {
   color: rgb(255, 255, 255);
@@ -244,68 +244,10 @@ section.module.parallax-4{
 section.module.parallax-2{
   background-image: url(http://i.imgur.com/q4pqETv.jpg);
 }
-}
-section.module.labg{
-  background-image: url(http://i.imgur.com/q4pqETv.jpg);
-}
-
-section.module.mainbg{
-  background-image: url(http://i.imgur.com/tR6F7M4.jpg);
-}
-section.module.londonbg{
-  background-image: url(http://i.imgur.com/isOGGQV.jpg);
-}
-section.module.lpbg{
-background-image: url(http://i.imgur.com/XSWjYLm.jpg);
-}
-
-section.module.niceday1bg{
-  background-image: url(http://i.imgur.com/qlHpnPQ.jpg);
-}
-
-section.module.niceday2bg{
-  background-image: url(http://i.imgur.com/XzjlKtM.jpg);
-}
-
-section.module.bigben{
-  background-image: url(http://i.imgur.com/gjui5fF.jpg);
-}
-
-section.module.books{
-  background-image: url(http://i.imgur.com/gbp3Qcq.jpg);
-}
-
-section.module.map{
-  background-image: url(http://i.imgur.com/oiEVL1v.jpg);
-}
-
-section.module.airbnbjen{
-  background-image: url(http://i.imgur.com/AYqR20p.jpg);
-}
-section.module.airbnblondonempty{
-  background-image:url(http://i.imgur.com/IQ5fsGJ.jpg);
-}
-
-section.module.niceday3bg{
-  background-image: url(http://i.imgur.com/UDzOOEe.jpg);
-}
-
-section.module.montecarlofront{
-  background-image: url(http://i.imgur.com/MjAcTKy.jpg);
-}
-
-section.module.lambo{
-  background-image: url(http://i.imgur.com/LGgJDwF.jpg);
-}
-
-section.module.cannesday1bg{
-  background-image:url(http://i.imgur.com/Loplbui.jpg);
-}
 
 section.module.beachfinderbg{
-  background-image: url('/static/media/headerPhoto.jpg');
+  background-image: url('/static/media/header2filtered.jpg');
 }
-
 
 @media all and (min-width: 600px) {
   section.module h2 {
@@ -316,7 +258,7 @@ section.module.beachfinderbg{
   }
   section.module.parallax h1 {
 
-    font-size: 80px;
+    font-size: 100px;
   }
 }
 
@@ -438,7 +380,7 @@ input[type=text]:focus, input[type=password]:focus {
 input[type=submit], input[type=button] {
   color: white;
   display: block;
-  width:100%;
+  width:50%;
   margin-top:15px;
   border: none;
   padding: 5px;
@@ -448,10 +390,10 @@ input[type=submit], input[type=button] {
 
 input[type="checkbox"], input[type="radio"]{
   background: rgba(191,185,169,.2);
-  height: 16px;
+  height: 30px;
   cursor: pointer;
   border-radius: 3px;
-  width:16px;
+  width:30px;
   -moz-appearance:none;
   -webkit-appearance:none;
   box-shadow: 0 1px 2px rgba(0,0,0,.44) inset;

@@ -2,18 +2,19 @@
 
 {% block content %}
 
-<h1>Search Results</h1>
-
+<h1 style = "font-size: 40pt" align="center">Search Results</h1>
+<br>
 <p>We found the following beaches for you:</p>
+<br>
 
-<ul>
 {% for beach in filtered_beaches_list %}
-	<li><a href="{{beach.id}}">{{beach.title_text}}</a></li>
+	<a href="{{beach.id}}">{{beach.title_text}}</a>
+	<br>
 
 {% endfor %}
-</ul>
 
-<a href="/beaches/search/">Back to search</a>
-
+<div class="centered2">
+	<a href="/beaches/search/">Back to search</a>
+</div>
 
 {% endblock %}

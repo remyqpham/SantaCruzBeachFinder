@@ -4,8 +4,13 @@
 
 <h1>{{beach.title_text}}</h1>
 
+<img src="{{ beach.image.url }}">
+
 <p>{{beach.description_text}}</p>
 
-<a href="/beaches/search/">Back to search</a>
 
+<br><br>
+<div class="centered2">
+	<a href="/beaches/search/">Back to search</a>
+</div>
 {% endblock %}

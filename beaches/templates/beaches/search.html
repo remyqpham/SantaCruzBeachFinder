@@ -2,24 +2,28 @@
 
 {% block content %}
 
-<h1>Find a beach that's...</h1>
+<h1 style = "font-size: 40pt" align="center">Find a beach that's...</h1>
 
-<form name="search_something" action=/beaches/results method="get">
+<br>
+
+<form name="search_something" style = "font-size: 25pt" action=/beaches/results method="get" align="center">
 	<input type="hidden" name="is_pet_friendly" value="0"/>
-	<input type="checkbox" name="is_pet_friendly" value="1">Pet Friendly<br>
+	<input type="checkbox" name="is_pet_friendly" value="1">Pet Friendly
 	<input type="hidden" name="is_alcohol_friendly" value="0">
 	<input type="checkbox" name="is_alcohol_friendly" value="1">Alcohol Friendly<br>
 	<input type="hidden" name="is_open_after_sunset" value="0">
-	<input type="checkbox" name="is_open_after_sunset" value="1">Open after Sunset<br>
+	<input type="checkbox" name="is_open_after_sunset" value="1">Open after Sunset
 	<input type="hidden" name="is_bonfire_friendly" value="0">
 	<input type="checkbox" name="is_bonfire_friendly" value="1">Bonfire Friendly<br>
 	<input type="hidden" name="is_camping_friendly" value="0">
-	<input type="checkbox" name="is_camping_friendly" value="1">Camping Friendly<br>
+	<input type="checkbox" name="is_camping_friendly" value="1">Camping Friendly
 	<input type="hidden" name="is_good_for_surfing" value="0">
 	<input type="checkbox" name="is_good_for_surfing" value="1">Good surf spot<br>
 	<input type="hidden" name="has_free_parking" value="0">
-	<input type="checkbox" name="has_free_parking" value="1">Free parking<br>
-	<input type=submit value="Search">
+	<input type="checkbox" name="has_free_parking" value="1">Free parking
+	<div class="centered3">
+		<input type=submit value="Search" class="button green" >
+	</div>
 </form>
 
 {% endblock %}
