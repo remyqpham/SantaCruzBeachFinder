@@ -67,7 +67,7 @@ def results(request):
 		photoURL = str(beach.photo.url)
 		filtered_beaches_photos_urls[beach.id] = photoURL[7:]
 		desc = beach.description_text
-		filtered_beaches_desc_previews[beach.id] = desc[0:100]
+		filtered_beaches_desc_previews[beach.id] = desc[0:150]
 
 
 	context = {
