@@ -79,7 +79,7 @@ figcaption{
 ============================================================ */
 body {
   background-color: #b4b4b4;
-  color: #787878;
+  color: #000000;
   font-family: "Cantarell", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 20px;
   line-height: 1.5;
@@ -134,7 +134,7 @@ main {
 ============================================================ */
 a {
   text-decoration: none;
-  color: #b4b4b4;
+  color: #000000;
 }
 
 a:hover {
@@ -246,7 +246,12 @@ section.module.parallax-2{
 }
 
 section.module.beachfinderbg{
-  background-image: url('/static/media/header2filtered.jpg');
+  background-image: url('/static/media/boardwalk.jpg');
+}
+
+section.module.boardwalk{
+
+  background-image: url('/static/media/boardwalk2.jpg');
 }
 
 @media all and (min-width: 600px) {

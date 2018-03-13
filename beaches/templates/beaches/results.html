@@ -2,23 +2,32 @@
 
 {% block content %}
 
-<h1 style = "font-size: 40pt" align="center">Search Results</h1>
-<br>
-<p>We found the following beaches for you:</p>
-<br>
+<h1 style = "font-size: 40pt; color:#000000" align="center" >Search Results</h1>
 
+
+{% if not filtered_beaches_list %}
+<br>
+<p align = "center"> No beaches were found that fit your search criteria.</p>
+<br>
+{% else %}
+	<br>
+	<p style="color:#000000">We found the following beaches for you:</p>
+	<br>
 {% for beach in filtered_beaches_list %}
-	
+
 	<div>
 		<img class="img" src="{{filtered_beaches_photos_urls|get_item:beach.id}}" width="200" >
 		<p>
 			<a href="{{beach.id}}" >{{beach.title_text}}</a><br>
-			
-			{{filtered_beaches_desc_previews|get_item:beach.id}}...<a href="{{beach.id}}">Read more</a> 
+			<p style="color:#000000">
+			{{filtered_beaches_desc_previews|get_item:beach.id}}...
+			<a href="{{beach.id}}">Read more</a> </p>
 	</div>
 
 	<br><br><br>
 {% endfor %}
+
+{% endif %}
 
 <div class="centered2">
 	<a href="/beaches/search/">Back to search</a>

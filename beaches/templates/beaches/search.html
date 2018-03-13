@@ -2,25 +2,27 @@
 
 {% block content %}
 
-<h1 style = "font-size: 40pt" align="center">Find a beach that's...</h1>
+<h1 style = "font-size: 40pt; color:#000000" align="center">Find a beach that's...</h1>
 
 <br>
 
-<form name="search_something" style = "font-size: 25pt" action=/beaches/results method="get" align="center">
+<form name="search_something" style = "font-size: 25pt color : black" action=/beaches/results method="get" align="center">
 	<input type="hidden" name="is_pet_friendly" value="0"/>
-	<input type="checkbox" name="is_pet_friendly" value="1">Pet Friendly
+	<input type="checkbox" style="color:#000000" name="is_pet_friendly" value="1"><a style="color:#000000"> Pet Friendly</a>
+	
 	<input type="hidden" name="is_alcohol_friendly" value="0">
-	<input type="checkbox" name="is_alcohol_friendly" value="1">Alcohol Friendly<br>
+
 	<input type="hidden" name="is_open_after_sunset" value="0">
-	<input type="checkbox" name="is_open_after_sunset" value="1">Open after Sunset
+	<input type="checkbox" name="is_open_after_sunset" value="1"><a style="color:#000000"> Open after Sunset</a><br>
+
 	<input type="hidden" name="is_bonfire_friendly" value="0">
-	<input type="checkbox" name="is_bonfire_friendly" value="1">Bonfire Friendly<br>
+	<input type="checkbox" name="is_bonfire_friendly" value="1"><a style="color:#000000"> Bonfire Friendly</a>
 	<input type="hidden" name="is_camping_friendly" value="0">
-	<input type="checkbox" name="is_camping_friendly" value="1">Camping Friendly
+	<input type="checkbox" name="is_camping_friendly" value="1"><a style="color:#000000"> Camping Friendly</a>
 	<input type="hidden" name="is_good_for_surfing" value="0">
-	<input type="checkbox" name="is_good_for_surfing" value="1">Good surf spot<br>
+	<input type="checkbox" name="is_good_for_surfing" value="1"><a style="color:#000000"> Good surf spot</a><br>
 	<input type="hidden" name="has_free_parking" value="0">
-	<input type="checkbox" name="has_free_parking" value="1">Free parking
+	<input type="checkbox" name="has_free_parking" value="1"><a style="color:#000000"> Free parking</a>
 	<div class="centered3">
 		<br>
 		<input type=submit value="Search" class="button green" >
