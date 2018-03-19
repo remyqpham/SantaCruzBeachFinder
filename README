@@ -1,0 +1,12 @@
+To run this app, please make sure you have the following installed on your computer:
+
+Python
+Django
+Pip
+Pillow
+
+Then, in a terminal window, navigate (cd) into the directory that holds this README (the same directory with manage.py).  Then run the following command:
+
+python manage.py runserver
+
+Then in your browser, go to http://127.0.0.1/beaches.  From there you may demo the app.
